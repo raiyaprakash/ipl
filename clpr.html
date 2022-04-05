@@ -1,0 +1,75 @@
+
+<html>
+<head>
+<title>Embed</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.1/socket.io.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+<script type="text/javascript" src="https://www.castamp.com/js/connect.js"></script>
+<link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css" integrity="sha384-jbCTJB16Q17718YM9U22iJkhuGbS0Gd2LjaWb4YJEZToOPmnKDjySVa323U+W7Fv" crossorigin="anonymous">
+<script type="text/javascript">
+var channel = "DiscoExplosionTV";
+var hT = "60b1997d7b6236a2b591b683e727c44ee52b89d25f43e701f0731e4846c75973";
+var sT = "0fd514998a4f71ee";
+var tmsT = "1649211358";	
+var cId = "446973636f4578706c6f73696f6e5456";
+var geO = "494e";
+var iDp = "323430393a343035333a3130633a313433343a646330363a386362643a316263363a36663333";
+var streamLive = true;
+var liveSince = 172;
+var online_enabled = false;
+
+eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('0 1=\'2://3/4/5/6.7?8=9&e=a&b=c&d=f\';',16,16,'var|strSource|https|nl.castamp.com|live|DiscoExplosionTV|chunklist|m3u8|h|jLA1oK_TBM8XXcfy_haf6Q|1620110519|u|b7843897d637fb1808b61c00a0c2a855|||2409_4053_10c_1434_dc06_8cbd_1bc6_6f33'.split('|'),0,{}))	
+</script>
+<style>
+  body {
+  margin: 0;
+}
+  </style>
+</head>
+<div id="player"></div>
+<script>
+  
+var player;
+  
+   var playerElement = document.getElementById("player");
+
+eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k[c]||c;k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('0=0.1("2",3);',4,4,'strSource|replace|1620110519|tmsT'.split('|'),0,{}))
+
+function loadPlayer(autoPlayer) {	
+player = new Clappr.Player({
+	
+  source: strSource,
+	  
+  poster: 'https://www.castamp.com/thumbs/30662_1649181601.jpg',
+  mute: false,
+  height: '100%',
+  width: '100%',
+  autoPlay: autoPlayer,
+  watermark: "https://www.castamp.com/amp_logo.png",
+  position: 'top-right',
+   watermarkLink: "https://www.castamp.com/channels",
+  mediacontrol: {seekbar: "#b8a48a", buttons: "#b8a48a"},
+  		 events: {
+        onError: function(e) { stopPlayer(e) },
+		onPlay: function() { Ping(); },
+		onStop: function() { Stop(); }
+}		
+});
+
+
+player.attachTo(playerElement);
+
+}	
+
+function stopPlayer(e) {
+player.destroy();
+loadPlayer(false);
+}
+
+loadPlayer(true);
+
+  </script>
+<script type="text/javascript" data-adel="atag" src="//achcdn.com/script/atg.js" czid="rsw3tbun"></script>
+</body>
+</html>
