@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Test Page</title>
+         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script> 
+          <script type="text/javascript" src="//cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/ewwink/clappr-quality-selector-plugin@latest/quality-selector.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://cdn.jsdelivr.net/npm/level-selector@latest/dist/level-selector.min.js"></script>
+    </head>
+    <body style="margin: 0px">
+        <div id="player"></div>
+  <script>
+    var player = new Clappr.Player({
+        source: "https://videodelivery.net/93b3d59e0b2d2af557ed0976e9f86fdf/manifest/video.m3u8", 
+    plugins: [LevelSelector],
+  levelSelectorConfig: {
+    title: 'Quality',
+    labels: {
+           
+                4: '', // 500kbps
+                3: '', // 500kbps
+        2: '', // 500kbps
+        1: '', // 240kbps
+        0: '', // 120kbps
+    },
+    labelCallback: function(playbackLevel, customLabel) {
+        return playbackLevel.level.height+'p' + customLabel; // High 720p
+    }
+  },
+        parentId: "#player",
+        poster: 'https://i.imgur.com/zk2FuIe.png',
+        mute: false,
+          height: "100%",
+  width: "100%"
+    });
+  </script> 
+    </body>
+</html>
